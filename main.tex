@@ -1,0 +1,201 @@
+\documentclass[12pt, twoside]{book}
+
+
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3.5cm,right=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovak]{babel}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\linespread{1.25}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Algoritmus}
+% nastavenia balicka listings
+% mozete pridat aj language=...
+% na nastavenie najcastejsie pouzivaneho prog. jazyka
+% takisto sa da zapnut cislovanie riadkov
+\lstset{frame=lines}
+\linespread{1.25}
+
+
+% --- Definicie zakladnych pojmov
+
+\def\mfrok{2023}
+\def\mfnazov{Názov vašej bakalárskej práce}
+\def\mftyp{Bakalárska práca}
+\def\mfautor{Roman Hudec}
+\def\mfskolitel{prof. Mgr. Martin Kanovský, PhD. } 
+\def\mfmiesto{Bratislava, \mfrok}
+\def\mfodbor{ Informatika a Matematika } 
+\def\program{ Dátová veda }
+
+% Ak je školiteľ z FMFI, uvádzate katedru školiteľa, zrejme by mala byť aj na zadaní z AIS2
+% Ak máte externého školiteľa, uvádzajte Katedru informatiky 
+\def\mfpracovisko{ Katedra aplikovanej informatiky }
+
+\begin{document}     
+\frontmatter
+\pagestyle{empty}
+
+
+% --- Obalka ------
+\begin{center}
+\sc\large
+Univerzita Komenského v Bratislave\\
+Fakulta matematiky, fyziky a informatiky
+
+\vfill
+
+{\LARGE\mfnazov}\\
+\mftyp
+\end{center}
+
+\vfill
+
+{\sc\large 
+\noindent \mfrok\\
+\mfautor
+}
+
+\cleardoublepage
+% --- koniec obalky ----
+
+
+% --- Titulný list
+
+\noindent
+
+\begin{center}
+\sc  
+\large
+Univerzita Komenského v Bratislave\\
+Fakulta matematiky, fyziky a informatiky
+
+\vfill
+
+{\LARGE\mfnazov}\\
+\mftyp
+\end{center}
+
+\vfill
+
+\noindent
+\begin{tabular}{ll}
+Študijný program: & \program \\
+Študijný odbor: & \mfodbor \\
+Školiace pracovisko: & \mfpracovisko \\
+Školiteľ: & \mfskolitel \\
+\end{tabular}
+
+\vfill
+
+
+\noindent \mfmiesto\\
+\mfautor
+
+\cleardoublepage
+% --- Koniec titulnej strany
+
+
+% -------------------
+% --- Zadanie z AIS
+% -------------------
+% v tlačenej verzii s podpismi zainteresovaných osôb.
+% v elektronickej verzii sa zverejňuje zadanie bez podpisov
+% v pracach v angličtine anglické aj slovenské zadanie
+
+\newpage 
+\setcounter{page}{2}
+%\includepdf{images/zadanie.pdf}
+
+% --- Koniec zadania
+
+\newpage 
+\pagestyle{plain}
+~
+
+\vfill
+{\bf Poďakovanie:}
+
+\newpage 
+\section*{Abstrakt}
+
+
+\paragraph*{Kľúčové slová:}
+
+\newpage 
+\section*{Abstract}
+
+\paragraph*{Keywords:} 
+
+
+% -------------------
+% --- Predhovor - v informatike sa zvacsa nepouziva
+% -------------------
+%\newpage 
+%
+%\chapter*{Predhovor}
+%
+%Predhovor je všeobecná informácia o práci, obsahuje hlavnú charakteristiku práce 
+%a okolnosti jej vzniku. Autor zdôvodní výber témy, stručne informuje o cieľoch 
+%a význame práce, spomenie domáci a zahraničný kontext, komu je práca určená, 
+%použité metódy, stav poznania; autor stručne charakterizuje svoj prístup a svoje 
+%hľadisko. 
+%
+% --- Koniec Predhovor
+
+
+
+% --- Obsah
+\newpage 
+
+\tableofcontents
+
+
+\newpage 
+
+%\listoffigures
+%\listoftables
+
+
+\mainmatter
+\pagestyle{headings}
+
+
+\input uvod.tex 
+
+\input kapitola.tex
+
+\input zaver.tex
+
+
+% --- Bibliografia
+\newpage	
+
+\backmatter
+
+\thispagestyle{empty}
+\clearpage
+
+\bibliographystyle{plain}
+\bibliography{literatura} 
+
+%--- Prilohy---
+
+%Nepovinná časť prílohy obsahuje materiály, ktoré neboli zaradené priamo  do textu. Každá príloha sa začína na novej strane.
+%Zoznam príloh je súčasťou obsahu.
+%
+\input appendixA.tex
+
+\input appendixB.tex
+
+\end{document}
+
+
+
+
+
+
