@@ -7,6 +7,30 @@ data <- read.spss(FILE.NAME, to.data.frame=TRUE, reencode="utf-8")
 #column names
 col.names <- colnames(data)
 
+#programmes
+programmes <- unique(data$odbor)
+
+converter <- function(x){
+  if(any(x == c("Rozhodne súhlasím","Takmer všetci učitelia", "Takmer všetky predmety" ))){
+    return(4)
+  }
+  
+  if(any(x == c("Skôr súhlasím", "Väčšina učiteľov", "Väčšina predmetov"))){
+    return(3)
+  }
+  
+  if(any(x == c("Skôr nesúhlasím", "Menšina učiteľov", "Menšina predmetov"))){
+    return(2)
+  }
+  
+  if(any(x == c("Rozhodne nesúhlasím", "Takmer žiadni učitelia", "Takmer žiadne predmety"))){
+    return(1)
+  }
+  return(x)
+}
+
+
+#TAKING DIMENSIONS
 
 #flexibility
 flex <- subset(data, select=7:11)
@@ -28,4 +52,4 @@ zruc <- subset(data, select=38:43)
 
 #podpor
 podpor <- subset(data, select=44:48)
-
+#END OF DIMENSIONS
