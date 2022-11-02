@@ -53,3 +53,6 @@ zruc <- subset(data, select=38:43)
 #podpor
 podpor <- subset(data, select=44:48)
 #END OF DIMENSIONS
+
+#conversion of data
+new.data <- data.frame(apply(data, c(1,2), converter))

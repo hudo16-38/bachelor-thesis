@@ -30,7 +30,7 @@
 % --- Definicia zakladnych pojmov
 
 \def\mfrok{2023}
-\def\mfnazov{Názov vašej bakalárskej práce}
+\def\mfnazov{Štatistická analýza multivariačných údajov: Prieskum spokojnosti študentov slovenských vysokých škôl}
 \def\mftyp{Bakalárska práca}
 \def\mfautor{Roman Hudec}
 \def\mfskolitel{prof. Mgr. Martin Kanovský, PhD. }
@@ -41,7 +41,7 @@
 
 % Ak je školiteľ z FMFI, uvádzate katedru školiteľa, zrejme by mala byť aj na zadaní z AIS2
 % Ak máte externého školiteľa, uvádzajte Katedru informatiky 
-\def\mfpracovisko{ Katedra aplikovanej informatiky }
+\def\mfpracovisko{ Katedra informatiky }
 
 \begin{document}     
 \frontmatter
@@ -182,12 +182,20 @@ Fakulta matematiky, fyziky a informatiky
 \mainmatter
 \pagestyle{headings}
 
+%zakomentovať ku koncu
+
+\chapter*{Poznámky}
+\begin{itemize}
+	\item hodnota \verb|netýka sa ma to| v dátach
+	\item asi chybné dáta
+	\item lýši sa počet dát (záznamov)
+\end{itemize}
+
+
 
 \input uvod.tex 
 
-\input kapitola.tex
-
-%\input latex.tex
+\input jadro.tex
 
 \input zaver.tex
 
