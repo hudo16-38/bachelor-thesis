@@ -71,27 +71,29 @@ rating.alpha <- alpha(rating)
 skills.alpha <- alpha(skills)
 student.support.alpha <- alpha(student.support)
 
-print("tau-equivalent alpha for flexibility")
-print(flexibility.alpha$total)
-print(strrep("-",20))
 
-print("tau-equivalent alpha for pred")
-print(pred.alpha$total)
-print(strrep("-",20))
+#print(flexibility.alpha)
+#print(pred.alpha)
+#print(teachers.teaching.alpha)
+#print(teachers.approach.alpha)
+#print(rating.alpha)
+#print(skills.alpha)
 
-print("tau-equivalent alpha for teachers teaching")
-print(teachers.teaching.alpha$total)
-print(strrep("-",20))
+alphas <- data.frame("index"=c(
+    "flexibility.alpha",
+    "pred.alpha",
+    "teachers.teaching.alpha",
+    "teachers.approach.alpha",
+    "rating.alpha",
+    "skills.alpha"
+   ))
 
-print("tau-equivalent alpha for teachers approach")
-print(teachers.approach.alpha$total)
-print(strrep("-",20))
-
-print("tau-equivalent alpha for rating")
-print(rating.alpha$total)
-print(strrep("-",20))
-
-print("tau-equivalent alpha for skills")
-print(skills.alpha$total)
-print(strrep("-",20))
-
+for(name in names(flexibility.alpha$total)){
+  alphas[name] = c(NA)
+}
+alphas[1,2:10] = round(flexibility.alpha$total,4)
+alphas[2,2:10] = round(pred.alpha$total,4)
+alphas[3,2:10] = round(teachers.teaching.alpha$total,4)
+alphas[4,2:10] = round(teachers.approach.alpha$total,4)
+alphas[5,2:10] = round(rating.alpha$total,4)
+alphas[6,2:10] = round(skills.alpha$total,4)
