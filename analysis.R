@@ -97,3 +97,21 @@ alphas[3,2:10] = round(teachers.teaching.alpha$total,4)
 alphas[4,2:10] = round(teachers.approach.alpha$total,4)
 alphas[5,2:10] = round(rating.alpha$total,4)
 alphas[6,2:10] = round(skills.alpha$total,4)
+
+poly.flex <- polychoric(flexibility)
+poly.flex.alpha <- alpha(poly.flex)
+
+poly.pred <- polychoric(pred)
+poly.pred.alpha <- alpha(poly.pred)
+
+poly.teachers.teaching <- polychoric(teachers.teaching)
+poly.teachers.teaching.alpha <- alpha(poly.teachers.teaching )
+
+poly.teachers.approach <- polychoric(teachers.approach)
+poly.teachers.approach.alpha <- alpha(teachers.approach)
+
+poly.rating <- polychoric(rating)
+poly.rating.alpha <- alpha(poly.rating)
+
+poly.skills <- polychoric(skills)
+poly.skills.alpha <- alpha(poly.skills)
