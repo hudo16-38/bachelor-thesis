@@ -2,14 +2,11 @@ library(foreign)
 library(psych)
 FILE.NAME <- "C:/Users/roman/Desktop/school/BS/bp/SAAVSspokoj.sav"
 setwd("C:/Users/roman/Desktop/school/BS/bp")
+alpha = psych::alpha
 
 #load data
 data <- read.spss(FILE.NAME, to.data.frame=TRUE, reencode="utf-8")
 
-#column names
-col.names <- colnames(data)
-
-#programmes
 programmes <- unique(data$odbor)
 
 converter <- function(x){
@@ -31,15 +28,19 @@ converter <- function(x){
   if(x == "Netýka sa ma to"){
     return(3)
   } 
-  return(x)
+  return(gsub(' ','',x))
 }
 
 #conversion of data to numbers
 new.data <- as.data.frame(apply(data, c(1,2), converter))
+drop = c("VSa", "fakulta1")
+new.data = new.data[, !(names(new.data) %in% drop)]
 
+#column names
+col.names <- colnames(new.data)
 
 #retyping of char columns to numeric type
-for(col in col.names[7:length(col.names)]){
+for(col in col.names[5:length(col.names)]){
   new.data[,col] = as.numeric(new.data[,col])
 }
 
@@ -63,6 +64,7 @@ totals <- subset(new.data, select=49:56)
 #END OF DIMENSIONS
 
 #tau-equivalent alpha
+
 flexibility.alpha <- alpha(flexibility)
 pred.alpha <- alpha(pred)
 teachers.teaching.alpha <- alpha(teachers.teaching)
@@ -71,13 +73,6 @@ rating.alpha <- alpha(rating)
 skills.alpha <- alpha(skills)
 student.support.alpha <- alpha(student.support)
 
-
-#print(flexibility.alpha)
-#print(pred.alpha)
-#print(teachers.teaching.alpha)
-#print(teachers.approach.alpha)
-#print(rating.alpha)
-#print(skills.alpha)
 
 alphas <- data.frame("index"=c(
     "flexibility.alpha",
@@ -99,19 +94,63 @@ alphas[5,2:10] = round(rating.alpha$total,4)
 alphas[6,2:10] = round(skills.alpha$total,4)
 
 poly.flex <- polychoric(flexibility)
-poly.flex.alpha <- alpha(poly.flex)
+poly.flex.alpha <- alpha(poly.flex$rho)
 
 poly.pred <- polychoric(pred)
-poly.pred.alpha <- alpha(poly.pred)
+poly.pred.alpha <- alpha(poly.pred$rho)
 
 poly.teachers.teaching <- polychoric(teachers.teaching)
-poly.teachers.teaching.alpha <- alpha(poly.teachers.teaching )
+poly.teachers.teaching.alpha <- alpha(poly.teachers.teaching$rho)
 
 poly.teachers.approach <- polychoric(teachers.approach)
-poly.teachers.approach.alpha <- alpha(teachers.approach)
+poly.teachers.approach.alpha <- alpha(poly.teachers.approach$rho)
 
 poly.rating <- polychoric(rating)
-poly.rating.alpha <- alpha(poly.rating)
+poly.rating.alpha <- alpha(poly.rating$rho)
 
 poly.skills <- polychoric(skills)
-poly.skills.alpha <- alpha(poly.skills)
+poly.skills.alpha <- alpha(poly.skills$rho)
+
+#dataframe for alphas gotten from polychoric matrices
+poly.alphas <- data.frame("index"=c(
+  "poly.flexibility.alpha",
+  "poly.pred.alpha",
+  "poly.teachers.teaching.alpha",
+  "poly.teachers.approach.alpha",
+  "poly.rating.alpha",
+  "poly.skills.alpha"
+))
+
+for(name in names(flexibility.alpha$total)){
+  poly.alphas[name] = c(NA)
+}
+
+poly.alphas[1,2:10] = round(poly.flex.alpha$total,4)
+poly.alphas[2,2:10] = round(poly.pred.alpha$total,4)
+poly.alphas[3,2:10] = round(poly.teachers.teaching.alpha$total,4)
+poly.alphas[4,2:10] = round(poly.teachers.approach.alpha$total,4)
+poly.alphas[5,2:10] = round(poly.rating.alpha$total,4)
+poly.alphas[6,2:10] = round(poly.skills.alpha$total,4)
+
+
+#universities
+euba = totals[new.data$VS == "EU",]
+uk = totals[new.data$VS == "UK",]
+ukf = totals[new.data$VS == "UKF",]
+
+#faculties
+fmfi = new.data[new.data$fakulta == "FMFI",]
+f = factor(fmfi$odbor)
+plot(fmfi$total, col = f )
+legend(1, legend = f)
+
+prez = data.frame("index"=c(
+  "flexibility",
+  "pred",
+  "teachers.teaching",
+  "teachers.approach",
+  "rating",
+  "skills"
+))
+prez["standard"] = alphas["std.alpha"]
+prez["polychoric"] = poly.alphas["std.alpha"]
