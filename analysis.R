@@ -1,5 +1,10 @@
 library(foreign)
 library(psych)
+library(mokken)
+library(mirt)
+library(lme4)
+library(robustlmm)
+
 FILE.NAME <- "C:/Users/roman/Desktop/school/BS/bp/SAAVSspokoj.sav"
 setwd("C:/Users/roman/Desktop/school/BS/bp")
 alpha = psych::alpha
@@ -46,27 +51,27 @@ for(col in col.names[5:length(col.names)]){
 
 
 #TAKING DIMENSIONS
-flexibility <- subset(new.data, select=7:11)
+flexibility <- subset(new.data, select=5:9)
 
-pred <- subset(new.data, select = 12:18)
+subjects <- subset(new.data, select = 10:16)
 
-teachers.teaching <- subset(new.data, select=19:25)
+teachers.teaching <- subset(new.data, select=17:23)
 
-teachers.approach <- subset(new.data, select = 26:32)
+teachers.approach <- subset(new.data, select = 24:30)
 
-rating <- subset(new.data, select = 33:37)
+rating <- subset(new.data, select = 31:35)
 
-skills <- subset(new.data, select=38:43)
+skills <- subset(new.data, select=36:41)
 
-student.support <- subset(new.data, select=44:48)
+student.support <- subset(new.data, select=42:46)
 
-totals <- subset(new.data, select=49:56)
+totals <- subset(new.data, select=47:54)
 #END OF DIMENSIONS
 
 #tau-equivalent alpha
 
 flexibility.alpha <- alpha(flexibility)
-pred.alpha <- alpha(pred)
+subjects.alpha <- alpha(subjects)
 teachers.teaching.alpha <- alpha(teachers.teaching)
 teachers.approach.alpha <- alpha(teachers.approach)
 rating.alpha <- alpha(rating)
@@ -76,28 +81,30 @@ student.support.alpha <- alpha(student.support)
 
 alphas <- data.frame("index"=c(
     "flexibility.alpha",
-    "pred.alpha",
+    "subjects.alpha",
     "teachers.teaching.alpha",
     "teachers.approach.alpha",
     "rating.alpha",
-    "skills.alpha"
+    "skills.alpha",
+    "student.support"
    ))
 
 for(name in names(flexibility.alpha$total)){
   alphas[name] = c(NA)
 }
 alphas[1,2:10] = round(flexibility.alpha$total,4)
-alphas[2,2:10] = round(pred.alpha$total,4)
+alphas[2,2:10] = round(subjects.alpha$total,4)
 alphas[3,2:10] = round(teachers.teaching.alpha$total,4)
 alphas[4,2:10] = round(teachers.approach.alpha$total,4)
 alphas[5,2:10] = round(rating.alpha$total,4)
 alphas[6,2:10] = round(skills.alpha$total,4)
+alphas[7, 2:10] = round(student.support$total,4)
 
 poly.flex <- polychoric(flexibility)
 poly.flex.alpha <- alpha(poly.flex$rho)
 
-poly.pred <- polychoric(pred)
-poly.pred.alpha <- alpha(poly.pred$rho)
+poly.subjects <- polychoric(subjects)
+poly.subjects.alpha <- alpha(poly.subjects$rho)
 
 poly.teachers.teaching <- polychoric(teachers.teaching)
 poly.teachers.teaching.alpha <- alpha(poly.teachers.teaching$rho)
@@ -111,14 +118,18 @@ poly.rating.alpha <- alpha(poly.rating$rho)
 poly.skills <- polychoric(skills)
 poly.skills.alpha <- alpha(poly.skills$rho)
 
+poly.student.support <- polychoric(student.support)
+poly.student.support.alpha <- alpha(poly.student.support$rho)
+
 #dataframe for alphas gotten from polychoric matrices
 poly.alphas <- data.frame("index"=c(
   "poly.flexibility.alpha",
-  "poly.pred.alpha",
+  "poly.subjects.alpha",
   "poly.teachers.teaching.alpha",
   "poly.teachers.approach.alpha",
   "poly.rating.alpha",
-  "poly.skills.alpha"
+  "poly.skills.alpha",
+  "poly.student.support.alpha"
 ))
 
 for(name in names(flexibility.alpha$total)){
@@ -126,31 +137,32 @@ for(name in names(flexibility.alpha$total)){
 }
 
 poly.alphas[1,2:10] = round(poly.flex.alpha$total,4)
-poly.alphas[2,2:10] = round(poly.pred.alpha$total,4)
+poly.alphas[2,2:10] = round(poly.subjects.alpha$total,4)
 poly.alphas[3,2:10] = round(poly.teachers.teaching.alpha$total,4)
 poly.alphas[4,2:10] = round(poly.teachers.approach.alpha$total,4)
 poly.alphas[5,2:10] = round(poly.rating.alpha$total,4)
 poly.alphas[6,2:10] = round(poly.skills.alpha$total,4)
+poly.alphas[7, 2:10] = round(poly.student.support.alpha$total,4)
+
+#scaling
+coefH(flexibility)
+coefH(subjects)
+coefH(teachers.teaching)
+coefH(teachers.approach)
+coefH(rating)
+coefH(skills)
+coefH(student.support)
 
 
-#universities
-euba = totals[new.data$VS == "EU",]
-uk = totals[new.data$VS == "UK",]
-ukf = totals[new.data$VS == "UKF",]
-
-#faculties
-fmfi = new.data[new.data$fakulta == "FMFI",]
-f = factor(fmfi$odbor)
-plot(fmfi$total, col = f )
-legend(1, legend = f)
 
 prez = data.frame("index"=c(
   "flexibility",
-  "pred",
+  "subjects",
   "teachers.teaching",
   "teachers.approach",
   "rating",
-  "skills"
+  "skills",
+  "student.support"
 ))
 prez["standard"] = alphas["std.alpha"]
 prez["polychoric"] = poly.alphas["std.alpha"]
