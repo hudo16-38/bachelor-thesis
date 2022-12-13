@@ -98,7 +98,7 @@ alphas[3,2:10] = round(teachers.teaching.alpha$total,4)
 alphas[4,2:10] = round(teachers.approach.alpha$total,4)
 alphas[5,2:10] = round(rating.alpha$total,4)
 alphas[6,2:10] = round(skills.alpha$total,4)
-alphas[7, 2:10] = round(student.support$total,4)
+alphas[7, 2:10] = round(student.support.alpha$total,4)
 
 poly.flex <- polychoric(flexibility)
 poly.flex.alpha <- alpha(poly.flex$rho)
@@ -152,6 +152,21 @@ coefH(teachers.approach)
 coefH(rating)
 coefH(skills)
 coefH(student.support)
+
+mon1 = check.monotonicity(flexibility)
+summary(mon1)
+plot(mon1)
+
+mon2 = check.monotonicity(subjects)
+summary(mon2)
+plot(mon2)
+
+
+
+
+
+
+#veci do prezentacie
 
 
 
