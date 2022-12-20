@@ -144,6 +144,7 @@ poly.alphas[5,2:10] = round(poly.rating.alpha$total,4)
 poly.alphas[6,2:10] = round(poly.skills.alpha$total,4)
 poly.alphas[7, 2:10] = round(poly.student.support.alpha$total,4)
 
+
 #scaling
 coefH(flexibility)
 coefH(subjects)
@@ -153,17 +154,86 @@ coefH(rating)
 coefH(skills)
 coefH(student.support)
 
+to.plot = FALSE
+
 mon1 = check.monotonicity(flexibility)
 summary(mon1)
-plot(mon1)
 
 mon2 = check.monotonicity(subjects)
 summary(mon2)
-plot(mon2)
+
+mon3 = check.monotonicity(teachers.teaching)
+summary(mon3)
+
+mon4 = check.monotonicity(teachers.approach)
+summary(mon4)
+
+mon5 = check.monotonicity(rating)
+summary(mon5)
+
+mon6 = check.monotonicity(skills)
+summary(mon6)
+
+mon7 = check.monotonicity(student.support)
+summary(mon7)
+
+if(to.plot){
+  for(mon in c(mon1, mon2, mon3, mon4, mon5, mon6, mon7)){
+    plot(mon)
+  }
+}
 
 
 
+m1 = mirt(flexibility, 1, itemtype="graded")
+m2 = mirt(subjects, 1, itemtype="graded")
+m3 = mirt(teachers.teaching, 1, itemtype="graded")
+m4 = mirt(teachers.approach, 1, itemtype="graded")
+m5 = mirt(rating, 1, itemtype="graded")
+m6 = mirt(skills, 1, itemtype="graded")
+m7 = mirt(student.support, 1, itemtype="graded")
 
+for(m in c(m1, m2, m3, m4, m5, m6, m7)){
+  M2(m,type="C2")
+}
+
+#jednoduche viacurovnove modely
+
+l1 = lmer(flex~1+(1|VS/fakulta/odbor),data=new.data)
+l2 = lmer(pred~1+(1|VS/fakulta/odbor),data=new.data)
+l3 = lmer(ucitVZD~1+(1|VS/fakulta/odbor),data=new.data)
+l4 = lmer(ucitPRIST~1+(1|VS/fakulta/odbor),data=new.data)
+l5 = lmer(hodnot~1+(1|VS/fakulta/odbor),data=new.data)
+l6 = lmer(zruc~1+(1|VS/fakulta/odbor),data=new.data)
+l7 = lmer(podpor~1+(1|VS/fakulta/odbor),data=new.data)
+
+
+#robustne viacurovnove modely
+l1r = rlmer(flex~1+(1|VS/fakulta/odbor),data=new.data)
+l2r = rlmer(pred~1+(1|VS/fakulta/odbor),data=new.data)
+l3r = rlmer(ucitVZD~1+(1|VS/fakulta/odbor),data=new.data)
+l4r = rlmer(ucitPRIST~1+(1|VS/fakulta/odbor),data=new.data)
+l5r = rlmer(hodnot~1+(1|VS/fakulta/odbor),data=new.data)
+l6r = rlmer(zruc~1+(1|VS/fakulta/odbor),data=new.data)
+l7r = rlmer(podpor~1+(1|VS/fakulta/odbor),data=new.data)
+
+
+#lepsi odhad
+l1rA = rlmer(flex~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+l2rA = rlmer(pred~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+l3rA = rlmer(ucitVZD~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+l4rA = rlmer(ucitPRIST~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+l5rA = rlmer(hodnot~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+l6rA = rlmer(zruc~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+l7rA = rlmer(podpor~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
+
+
+
+compare(l1,l1r,l1rA)
+
+ranef(l1)
+ranef(l1r)
+ranef(l1rA)
 
 
 #veci do prezentacie

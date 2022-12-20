@@ -2,19 +2,16 @@
   \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
 \begin{thebibliography}{1}
 
-\bibitem{smernica}
-{Univerzita Komenského v Bratislave}.
-\newblock Vnútorný predpis č. 7/2018, {Ú}plné znenie vnútorného predpisu
-  č. 12/2013 {S}mernice rektora {U}niverzity {K}omenského v {B}ratislave o
-  základných náležitostiach záverečných prác, rigoróznych prác a
-  habilitačných prác, kontrole ich originality, uchovávaní a
-  sprístupňovaní na {U}niverzite {K}omenského v {B}ratislave v znení
-  dodatku č. 1 a dodatku č. 2 smernica rektora {U}niverzity {K}omenského v
-  {B}ratislave o základných náležitostiach záverečných prác,
-  rigoróznych prác a habilitačných prác, kontrole ich originality,
-  uchovávaní a sprístupňovaní na {U}niverzite {K}omenského v
-  {B}ratislave, 2013.
-\newblock [Citované 2020-10-19] Dostupné z
-  \url{https://uniba.sk/fileadmin/ruk/legislativa/2018/Vp_2018_07.pdf}.
+\bibitem{spain}
+Ana~Isabel Moro-Egido and Judith Panades.
+\newblock An {Analysis} of {Student} {Satisfaction}: {Full}-{Time} vs.
+  {Part}-{Time} {Students}.
+\newblock {\em Social Indicators Research}, 4(3):1--26, 2010.
+
+\bibitem{prieskum}
+SAAVŠ.
+\newblock Akademická štrťhodinka.
+\newblock \url{https://prieskum.saavs.sk/o-prieskume/}, 2021.
+\newblock [online].
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.21)  13 DEC 2022 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.21)  15 DEC 2022 21:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,7 +450,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [3] [4
 
 ]
-<images/zadanie.pdf, id=63, 597.50731pt x 845.04607pt>
+<images/zadanie.pdf, id=51, 597.50731pt x 845.04607pt>
 File: images/zadanie.pdf Graphic file (type pdf)
 <use images/zadanie.pdf>
 Package pdftex.def Info: images/zadanie.pdf  used on input line 112.
@@ -459,7 +459,7 @@ File: images/zadanie.pdf Graphic file (type pdf)
 <use images/zadanie.pdf>
 Package pdftex.def Info: images/zadanie.pdf  used on input line 112.
 (pdftex.def)             Requested size: 597.50584pt x 845.044pt.
-<images/zadanie.pdf, id=66, page=1, 597.50731pt x 845.04607pt>
+<images/zadanie.pdf, id=54, page=1, 597.50731pt x 845.04607pt>
 File: images/zadanie.pdf Graphic file (type pdf)
 <use images/zadanie.pdf, page 1>
 Package pdftex.def Info: images/zadanie.pdf , page1 used on input line 112.
@@ -507,86 +507,60 @@ l.141 \newpage
 
  [7] [8
 
-] (uvod.tex) (jadro.tex [1
+] (uvod.tex) (ciel.tex [1
 
-]
-[2
+] [2
 
 ]
 Kapitola 1.
+) (metodika.tex [3] [4
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5.
+]
+Kapitola 2.
+[5] [6]) (vysledky.tex [7] [8
 
-) (zaver.tex [3] [4
+]
+Kapitola 3.
+) (zaver.tex [9] [10
 
-]) [5] [6
+]) [11] [12
 
 ] (main.bbl
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-8.
+4.
 
 (C:\Users\roman\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ))
-(appendixA.tex [7
+[13
 
 
-] [8
-
-]) (appendixB.tex [9] [10
-
-]) [11] (main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 3A4AABA70B9E45E121E4043BD2DE6DD8;1394
-(rerunfilecheck)             After:  EFDA3D34E470B1FB1E1785D5262046A1;1069.
+] (main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 3E9703AF6B094E65143ED49258D567F2;937.
  ) 
 Here is how much of TeX's memory you used:
- 12845 strings out of 475389
- 204488 string characters out of 2777000
- 567350 words of memory out of 3000000
+ 12843 strings out of 475389
+ 204385 string characters out of 2777000
+ 574389 words of memory out of 3000000
  33985 multiletter control sequences out of 15000+600000
- 481331 words of font info for 50 fonts, out of 8000000 for 9000
+ 482015 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,290b,573s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{subsection.1.1.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.1.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.1.1.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.1.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
-
- <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt12
-00.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecbx1440.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecsl1200.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ecbx2488.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecbx1728.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/lj
-four/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\roman\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk> <C:\Users\roman\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk>
-Output written on main.pdf (22 pages, 477251 bytes).
+ 72i,17n,77p,2155b,573s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1200.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecti1200.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecbx1440.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecsl1200.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\roman\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\roman\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\roman\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\roman\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk> <C:\Users\roman\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk>
+Output written on main.pdf (24 pages, 489276 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 555 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
