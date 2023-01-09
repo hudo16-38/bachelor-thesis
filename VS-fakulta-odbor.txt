@@ -1,0 +1,291 @@
+"Odbor","Intercept"
+architektura:FAD:STU,-0.603685954
+architektura:FU:TUKE,-0.402597729
+bezpecnost:DREVF:TUZV,0.577455770
+bezpecnost:FBI:ZU,-0.027380084
+bezpecnost:MTF:STU,0.363256710
+bezpecnost:PEDUKF:UKF,0.123405262
+biologia:FBP:SPU,0.053881257
+biologia:FHPV:PU,-0.023741090
+biologia:FPVUCM:UCM,0.028677628
+biologia:FPVUKF:UKF,-0.483955825
+biologia:PRIRUK:UK,0.292461060
+biologia:PRIRUPJS:UPJS,-0.722332620
+biotechnologie:FBP:SPU,0.136074661
+biotechnologie:FCHPT:STU,0.222154123
+biotechnologie:FPVUCM:UCM,-0.210396155
+biotechnologie:PRIRUK:UK,-0.031745684
+doprava:FBERG:TUKE,-0.140423932
+doprava:FEI:STU,-0.133741434
+doprava:FPEDS:ZU,0.038997863
+doprava:LETF:TUKE,0.132931595
+drevarstvo:DREVF:TUZV,-0.349413823
+ekologia:FEE:TUZV,0.284468635
+ekologia:FESRR:SPU,0.055813929
+ekologia:FHPV:PU,0.325661830
+ekologia:FMMR:TUKE,0.047447355
+ekologia:FMPU:PU,0.213365957
+ekologia:FPVUKF:UKF,0.378558929
+ekologia:FPVUMB:UMB,0.225347688
+ekologia:PRIRUK:UK,0.228657247
+ekologia:PRIRUPJS:UPJS,0.033130997
+ekologia:RZU:ZU,0.076725288
+ekologia:STFTUKE:TUKE,0.069476074
+ekonomia:DREVF:TUZV           -0.030225067
+ekonomia:EF:TUKE              -0.050556892
+ekonomia:EFUMB:UMB             0.347293412
+ekonomia:FEKIN:UJS             0.212534412
+ekonomia:FEM:SPU              -0.067924258
+ekonomia:FESRR:SPU            -0.095600848
+ekonomia:FHI:EU                0.328894224
+ekonomia:FMPU:PU              -0.159619109
+ekonomia:FMUK:UK               0.131788826
+ekonomia:FMV:EU               -0.389592330
+ekonomia:FPEDS:ZU             -0.222634394
+ekonomia:FPM:EU               -0.115275569
+ekonomia:FRI:ZU                0.443486311
+ekonomia:FSEV:UK              -0.332502435
+ekonomia:FSEVZ:TUAD            0.075374640
+ekonomia:FSS:UKF               0.638732299
+ekonomia:NHF:EU                0.116406389
+ekonomia:OF:EU                 0.082677484
+ekonomia:PEDKU:KU             -0.250972241
+ekonomia:PHF:EU                0.154038604
+ekonomia:RSTU:STU              0.248505266
+ekonomia:RTUZV:TUZV            0.078773460
+ekonomia:RUCM:UCM              0.212483671
+elektrotechnika:FEI:STU       -0.324158288
+elektrotechnika:FEIT:ZU       -0.191548249
+elektrotechnika:FEITUKE:TUKE  -0.404363237
+elektrotechnika:STRJTUKE:TUKE  0.280554765
+farmacia:FAF:UK                0.241249928
+farmacia:RUVLF:UVLF            0.124766138
+filologia:FAJ:EU              -0.165024648
+filologia:FEKIN:UJS            0.120382046
+filologia:FIFKU:KU            -0.075485395
+filologia:FIFPU:PU            -0.324657771
+filologia:FIFTTU:TTU           0.232547444
+filologia:FIFUCM:UCM          -0.612312292
+filologia:FIFUK:UK             0.319923914
+filologia:FIFUKF:UKF          -0.562984200
+filologia:FIFUMB:UMB           0.231355151
+filologia:FIFUPJS:UPJS         0.007663164
+filologia:FSS:UKF             -0.110869851
+filologia:PEDTTU:TTU           0.039289628
+filologia:PEDUK:UK             0.146865212
+filologia:PEDUKF:UKF           0.651694260
+filozofia:FIFKU:KU             0.134705377
+filozofia:FIFPU:PU             0.632713189
+filozofia:FIFTTU:TTU           0.597881215
+filozofia:FIFUCM:UCM           0.265052457
+filozofia:FIFUK:UK            -0.265773364
+filozofia:FIFUKF:UKF           0.174434321
+filozofia:FIFUMB:UMB           0.009100856
+filozofia:FIFUPJS:UPJS        -0.225071611
+filozofia:TFTTU:TTU            0.135188035
+fyzika:FMFI:UK                 0.407428884
+fyzika:FPVUKF:UKF              0.138494716
+fyzika:PRIRUPJS:UPJS           0.351702484
+geodezia:FBERG:TUKE           -0.107645197
+geodezia:STFSTU:STU           -0.217371227
+geodezia:STFZU:ZU              0.076378480
+historia:FIFKU:KU             -0.213834539
+historia:FIFPU:PU             -0.348425789
+historia:FIFTTU:TTU            0.006105824
+historia:FIFUCM:UCM            0.009680815
+historia:FIFUK:UK              0.648744738
+historia:FIFUKF:UKF            0.235551157
+historia:FIFUMB:UMB            0.052290454
+historia:FIFUPJS:UPJS          0.495968531
+historia:GKTF:PU               0.189478652
+chemia:FCHPT:STU               0.029111835
+chemia:FPVUCM:UCM             -0.146845972
+chemia:FPVUMB:UMB             -0.359855684
+chemia:PRIRUK:UK               0.227566964
+chemia:PRIRUPJS:UPJS           0.427012292
+chemtechnologie:FCHPT:STU      0.146608761
+informatika:FEI:STU            0.006271753
+informatika:FEIT:ZU           -0.154834118
+informatika:FEITUKE:TUKE       0.045362597
+informatika:FEKIN:UJS         -0.390770288
+informatika:FHI:EU            -0.625938323
+informatika:FIIT:STU          -0.067056429
+informatika:FMFI:UK            0.213244697
+informatika:FPVUCM:UCM         0.502936082
+informatika:FPVUKF:UKF        -0.075766471
+informatika:FPVUMB:UMB         0.133391970
+informatika:FRI:ZU             0.087977750
+informatika:PRIRUPJS:UPJS      0.523652173
+kybernetika:FBERG:TUKE         0.164020825
+kybernetika:FEI:STU            0.026143020
+kybernetika:FEIT:ZU            0.239927477
+kybernetika:FCHPT:STU         -0.082489506
+kybernetika:MTF:STU            0.022555312
+kybernetika:STRJSTU:STU        0.071743737
+lekarstvo:JLF:UK               0.533845793
+lekarstvo:LFUK:UK             -0.488093375
+lekarstvo:LFUPJS:UPJS          0.225951485
+lekarstvozubne:LFUK:UK        -0.145024526
+lekarstvozubne:LFUPJS:UPJS    -0.817067527
+lesnictvo:LESF:TUZV            0.013197866
+logopedia:PEDKU:KU             0.059064599
+logopedia:PEDUK:UK            -0.055284397
+matematika:FHVZU:ZU           -0.111600869
+matematika:FMFI:UK             0.178371416
+matematika:FPVUKF:UKF         -0.003583292
+matematika:FPVUMB:UMB         -0.028165158
+matematika:PRIRUPJS:UPJS       0.092736558
+matematika:STFSTU:STU          0.179880335
+media:FHVZU:ZU                 0.540674505
+media:FIFKU:KU                -0.033629832
+media:FIFPU:PU                -0.152033327
+media:FIFUK:UK                -0.385885725
+media:FIFUKF:UKF              -0.931659324
+media:FIFUPJS:UPJS            -0.461522532
+media:FMK:UCM                  0.283225935
+media:FSEV:UK                 -0.029563192
+osetrovatelstvo:FSVZ:UKF       0.408652753
+osetrovatelstvo:FZ:KU         -0.298653023
+osetrovatelstvo:FZO:PU         0.041065976
+osetrovatelstvo:FZSP:TTU      -0.124113998
+osetrovatelstvo:FZTUAD:TUAD   -0.085713098
+osetrovatelstvo:JLF:UK        -0.112096293
+osetrovatelstvo:LFUPJS:UPJS    0.270751868
+politologia:FIFPU:PU           0.031277453
+politologia:FIFTTU:TTU         0.078951585
+politologia:FIFUK:UK           0.447436483
+politologia:FIFUKF:UKF         0.133634305
+politologia:FIFUPJS:UPJS       0.763477178
+politologia:FPVMV:UMB          0.137022241
+politologia:FSEV:UK            0.258338694
+politologia:FSVUCM:UCM        -0.276469250
+politologia:FVS:UPJS           0.011232845
+politologia:RTUAD:TUAD         0.136098638
+polnohospodarstvo:FAPZ:SPU     0.196636379
+polnohospodarstvo:FZKI:SPU     0.007565946
+polnohospodarstvo:STFSTU:STU  -0.015379519
+porodnictvo:FZO:PU            -1.052164900
+porodnictvo:JLF:UK            -0.086251827
+potravinarstvo:FBP:SPU         0.037027367
+potravinarstvo:FCHPT:STU      -0.112379807
+pravo:PRATTU:TTU               0.633110244
+pravo:PRAUK:UK                 0.159186465
+pravo:PRAUMB:UMB               0.165751494
+pravo:PRAUPJS:UPJS            -0.062230641
+priestor:RSTU:STU             -0.387262214
+psychologia:FIFKU:KU           0.360214144
+psychologia:FIFPU:PU           1.095810837
+psychologia:FIFTTU:TTU        -0.479810261
+psychologia:FIFUCM:UCM        -0.470602026
+psychologia:FIFUK:UK          -0.991523084
+psychologia:FIFUPJS:UPJS      -0.170904979
+psychologia:FSEV:UK            0.567584630
+psychologia:FSVZ:UKF          -0.327553169
+psychologia:PEDUK:UK          -0.018992330
+psychologia:PEDUMB:UMB         0.193229909
+socialnapraca:FIFPU:PU         0.162652115
+socialnapraca:FIFUPJS:UPJS     0.230221649
+socialnapraca:FSVUCM:UCM       0.271960914
+socialnapraca:FSVZ:UKF         0.136819784
+socialnapraca:FZSP:TTU         0.251894514
+socialnapraca:PBF:PU           0.178832273
+socialnapraca:PEDKU:KU         0.450067937
+socialnapraca:PEDUK:UK         0.069011798
+socialnapraca:PEDUMB:UMB      -0.127594994
+socialnapraca:TFKU:KU         -0.277694061
+socialnapraca:TFTTU:TTU       -0.084293379
+socioantropologia:FIFTTU:TTU  -0.126442721
+socioantropologia:FIFUK:UK     0.038952482
+socioantropologia:FIFUKF:UKF   0.087957689
+socioantropologia:FSEV:UK     -0.137078538
+sport:FSPORT:PU               -0.012772959
+sport:FTVS:UK                 -0.021696388
+sport:PEDUKF:UKF              -0.205725180
+sport:RUPJS:UPJS               0.340751543
+stavebnictvo:STFSTU:STU       -0.193309530
+stavebnictvo:STFTUKE:TUKE     -0.504214765
+stavebnictvo:STFZU:ZU         -0.290501938
+strojarstvo:FEI:STU            0.174344166
+strojarstvo:FMMR:TUKE         -0.407278056
+strojarstvo:FPT:TUAD           0.147914767
+strojarstvo:FST:TUAD           0.203642921
+strojarstvo:FTECH:TUZV        -0.047460670
+strojarstvo:FVT:TUKE           0.361928634
+strojarstvo:MTF:STU            0.039703019
+strojarstvo:STRJSTU:STU       -0.078515081
+strojarstvo:STRJTUKE:TUKE      0.162532470
+strojarstvo:STRJZU:ZU         -0.002632181
+strojarstvo:TFSPU:SPU         -0.063784112
+teologia:EBF:UK                0.227128192
+teologia:GKTF:PU               0.443323704
+teologia:PBF:PU                0.235495706
+teologia:PEDUMB:UMB            0.166586512
+teologia:RKF:UK               -0.050482371
+teologia:RTF:UJS               0.627986071
+teologia:TFKU:KU               0.384521775
+teologia:TFTTU:TTU            -0.133763670
+ucitelstvo:EBF:UK,-0.050238727
+ucitelstvo:FHPV:PU,-0.598034092
+ucitelstvo:FHVZU:ZU,-0.561732395
+ucitelstvo:FIFKU:KU,0.450493460
+ucitelstvo:FIFPU:PU,-0.663782737
+ucitelstvo:FIFUCM:UCM,0.292637965
+ucitelstvo:FIFUK:UK,0.254498226
+ucitelstvo:FIFUKF:UKF,0.013180412
+ucitelstvo:FIFUMB:UMB,-0.318405290
+ucitelstvo:FIFUPJS:UPJS,-1.087236458
+ucitelstvo:FMFI:UK,-0.459593991
+ucitelstvo:FPVUKF:UKF,-0.016917705
+ucitelstvo:FPVUMB:UMB,-0.002025050
+ucitelstvo:FSPORT:PU,-0.254424742
+ucitelstvo:FSS:UKF,-0.228778889
+ucitelstvo:FTVS:UK,-0.263578822
+ucitelstvo:PEDKU:KU,-0.337855876
+ucitelstvo:PEDPU:PU,-0.191613592
+ucitelstvo:PEDTTU:TTU,-0.292758649
+ucitelstvo:PEDUJS:UJS,0.042816567
+ucitelstvo:PEDUK:UK,-0.593628076
+ucitelstvo:PEDUKF:UKF,-0.164113604
+ucitelstvo:PEDUMB:UMB,-0.256043719
+ucitelstvo:PRIRUK:UK,-1.400289292
+ucitelstvo:PRIRUPJS:UPJS,-0.221177310
+ucitelstvo:RPU:PU,-0.126922424
+ucitelstvo:TFKU:KU,0.178318817
+umenie:DIVF:VSMU,-0.458902165
+umenie:DREVF:TUZV,-0.310433382
+umenie:FAD:STU,0.211029129
+umenie:FDU:AU,0.333472935
+umenie:FMU:AU,-0.026129726
+umenie:FTF:VSMU,0.268747798
+umenie:FU:TUKE,-0.153302434
+umenie:FVU:AU,0.203515414
+umenie:HTF:VSMU,-0.031121375
+umenie:RVSVU:VSVU,0.148759940
+umenoveda:DIVF:VSMU,0.107294048
+umenoveda:FIFTTU:TTU,-0.385014941
+umenoveda:FIFUK:UK,0.126733720
+umenoveda:FIFUKF:UKF,0.035556487
+umenoveda:FTF:VSMU,-0.139708136
+umenoveda:HTF:VSMU,0.009511900
+umenoveda:PEDUKF:UKF,-0.542289671
+umenoveda:RVSVU:VSVU,-0.111310018
+vedyzem:FHPV:PU,0.339793681
+vedyzem:FPVUKF:UKF,-0.015321324
+vedyzem:FPVUMB:UMB,-0.216350445
+vedyzem:PRIRUK:UK,-0.175376132
+vedyzem:PRIRUPJS:UPJS,0.103892573
+verejzdrav:FZSP:TTU,0.331133450
+verejzdrav:FZTUAD:TUAD,-0.165483062
+verejzdrav:JLF:UK,-0.200524146
+verejzdrav:LFUPJS:UPJS,-0.390327578
+veterina:RUVLF:UVLF,-0.370803802
+zdravotmictvo:FAF:UK,-0.559031933
+zdravotmictvo:FSVZ:UKF,0.357243420
+zdravotmictvo:FZ:KU,-0.334460822
+zdravotmictvo:FZO:PU,0.064978031
+zdravotmictvo:FZSP:TTU,-0.630647574
+zdravotmictvo:FZTUAD:TUAD,-0.247406890
+zdravotmictvo:FZVUCM:UCM,-0.633124899
+zdravotmictvo:LFUPJS:UPJS,-0.029349523
+zemzdroje:FBERG:TUKE,-0.008310333
+zemzdroje:FMMR:TUKE,0.815648831

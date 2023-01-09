@@ -4,6 +4,7 @@ library(mokken)
 library(mirt)
 library(lme4)
 library(robustlmm)
+#library(sjPlot)
 
 FILE.NAME <- "C:/Users/roman/Desktop/school/BS/bp/SAAVSspokoj.sav"
 setwd("C:/Users/roman/Desktop/school/BS/bp")
@@ -226,15 +227,10 @@ l4rA = rlmer(ucitPRIST~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2p
 l5rA = rlmer(hodnot~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
 l6rA = rlmer(zruc~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
 l7rA = rlmer(podpor~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
-
+l8rA = rlmer(total~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propII(smoothPsi, k = 2.28))
 
 
 compare(l1,l1r,l1rA)
-
-ranef(l1)
-ranef(l1r)
-ranef(l1rA)
-
 
 #veci do prezentacie
 
