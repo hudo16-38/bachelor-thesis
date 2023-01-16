@@ -67,7 +67,7 @@ skills <- subset(new.data, select=36:41)
 student.support <- subset(new.data, select=42:46)
 
 totals <- subset(new.data, select=47:54)
-#END OF DIMENSIONS
+#############################################################
 
 #tau-equivalent alpha
 
@@ -144,9 +144,10 @@ poly.alphas[4,2:10] = round(poly.teachers.approach.alpha$total,4)
 poly.alphas[5,2:10] = round(poly.rating.alpha$total,4)
 poly.alphas[6,2:10] = round(poly.skills.alpha$total,4)
 poly.alphas[7, 2:10] = round(poly.student.support.alpha$total,4)
+#######################################################################
 
 
-#scaling
+#SCALING
 coefH(flexibility)
 coefH(subjects)
 coefH(teachers.teaching)
@@ -183,6 +184,28 @@ if(to.plot){
     plot(mon)
   }
 }
+
+#TODO - check.ca, AISP
+
+check.flexibilty = check.ca(flexibility)
+check.subjects = check.ca(subjects)
+check.teachers.teaching = check.ca(teachers.teaching)
+check.teachers.approach = check.ca(teachers.approach)
+check.rating = check.ca(rating)
+check.skills = check.ca(skills)
+check.student.support = check.ca(student.support)
+
+
+flexibility.aisp = AISP(flexibility)
+subjects.aisp = AISP(subjects)
+teachers.teaching.aisp = AISP(teachers.teaching)
+teachers.approach.aisp = AISP(teachers.approach)
+rating.aisp = AISP(rating)
+skills.aisp = AISP(skills)
+student.support.aisp = AISP(student.support)
+############################################################
+
+
 
 
 
@@ -232,18 +255,4 @@ l8rA = rlmer(total~1+(1|VS/fakulta/odbor),data=new.data, rho.sigma.b = psi2propI
 
 compare(l1,l1r,l1rA)
 
-#veci do prezentacie
 
-
-
-prez = data.frame("index"=c(
-  "flexibility",
-  "subjects",
-  "teachers.teaching",
-  "teachers.approach",
-  "rating",
-  "skills",
-  "student.support"
-))
-prez["standard"] = alphas["std.alpha"]
-prez["polychoric"] = poly.alphas["std.alpha"]
