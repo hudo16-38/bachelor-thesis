@@ -5,6 +5,7 @@ library(mirt)
 library(lme4)
 library(robustlmm)
 
+setwd("C:/Users/roman/Desktop/school/BS/bp")
 load("robust.RData")
 load("robustA.RData")
 
@@ -18,6 +19,4 @@ rf6 = ranef(l6rA)
 rf7 = ranef(l7rA)
 rf8 = ranef(l8rA)
 
-odbor.flex = rf1$`odbor:(fakulta:VS)`
-dim(odbor.flex)
 

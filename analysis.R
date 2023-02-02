@@ -54,7 +54,7 @@ for(col in col.names[5:length(col.names)]){
 #TAKING DIMENSIONS
 flexibility <- subset(new.data, select=5:9)
 
-subjects <- subset(new.data, select = 10:16)
+subjects <- subset(new.data, select = 10:13)
 
 teachers.teaching <- subset(new.data, select=17:23)
 
@@ -185,12 +185,12 @@ if(to.plot){
   }
 }
 
-#TODO - check.ca, AISP
+
 
 check.flexibilty = check.ca(flexibility)
-check.subjects = check.ca(subjects)
+check.subjects = check.ca(subjects, TRUE)
 check.teachers.teaching = check.ca(teachers.teaching)
-check.teachers.approach = check.ca(teachers.approach)
+check.teachers.approach = check.ca(teachers.approach, TRUE)
 check.rating = check.ca(rating)
 check.skills = check.ca(skills)
 check.student.support = check.ca(student.support)
@@ -199,10 +199,14 @@ check.student.support = check.ca(student.support)
 flexibility.aisp = AISP(flexibility)
 subjects.aisp = AISP(subjects)
 teachers.teaching.aisp = AISP(teachers.teaching)
-teachers.approach.aisp = AISP(teachers.approach)
+teachers.approach.aisp = aisp(teachers.approach, search="ga")
 rating.aisp = AISP(rating)
 skills.aisp = AISP(skills)
 student.support.aisp = AISP(student.support)
+
+for(c in 5:55){
+  aisp(teachers.approach, search="ga", lowerbound = c/100)
+}
 ############################################################
 
 
