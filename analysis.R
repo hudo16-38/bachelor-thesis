@@ -4,6 +4,7 @@ library(mokken)
 library(mirt)
 library(lme4)
 library(robustlmm)
+library(eRm)
 #library(sjPlot)
 
 FILE.NAME <- "C:/Users/roman/Desktop/school/BS/bp/SAAVSspokoj.sav"
@@ -54,7 +55,7 @@ for(col in col.names[5:length(col.names)]){
 #TAKING DIMENSIONS
 flexibility <- subset(new.data, select=5:9)
 
-subjects <- subset(new.data, select = 10:13)
+subjects <- subset(new.data, select = 10:16) #13
 
 teachers.teaching <- subset(new.data, select=17:23)
 
@@ -187,26 +188,22 @@ if(to.plot){
 
 
 
-check.flexibilty = check.ca(flexibility)
+check.flexibilty = check.ca(flexibility, TRUE)
 check.subjects = check.ca(subjects, TRUE)
 check.teachers.teaching = check.ca(teachers.teaching)
 check.teachers.approach = check.ca(teachers.approach, TRUE)
-check.rating = check.ca(rating)
-check.skills = check.ca(skills)
-check.student.support = check.ca(student.support)
+check.rating = check.ca(rating, TRUE)
+check.skills = check.ca(skills, TRUE)
+check.student.support = check.ca(student.support, TRUE)
 
 
-flexibility.aisp = AISP(flexibility)
-subjects.aisp = AISP(subjects)
-teachers.teaching.aisp = AISP(teachers.teaching)
+flexibility.aisp = aisp(flexibility, search="ga")
+subjects.aisp = aisp(subjects, search="ga")
+teachers.teaching.aisp = aisp(teachers.teaching, search="ga")
 teachers.approach.aisp = aisp(teachers.approach, search="ga")
-rating.aisp = AISP(rating)
-skills.aisp = AISP(skills)
-student.support.aisp = AISP(student.support)
-
-for(c in 5:55){
-  aisp(teachers.approach, search="ga", lowerbound = c/100)
-}
+rating.aisp = aisp(rating, search="ga")
+skills.aisp = aisp(skills, search="ga")
+student.support.aisp =aisp(student.support, search="ga")
 ############################################################
 
 
